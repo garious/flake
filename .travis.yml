@@ -1,0 +1,6 @@
+langauge: c
+sudo: false
+compiler: gcc
+script: make -C flake
+env:
+  - CC=gcc

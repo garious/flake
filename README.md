@@ -1,6 +1,8 @@
 The Flake Build System
 ======================
 
+[![Build Status](https://travis-ci.org/garious/flake.svg)](https://travis-ci.org/garious/flake)
+
 Introduction
 ------------
 
