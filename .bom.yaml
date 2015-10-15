@@ -1,0 +1,14 @@
+--- # Bill of Materials
+license: MIT
+license-file: LICENSE.txt
+copyright-holders: [Greg Fitzgerald]
+dependencies:
+  - root: lua/lua-5.3.1
+    origin: http://www.lua.org/ftp/lua-5.3.1.tar.gz
+    license: MIT
+    license-file: doc/readme.html
+    copyright-holders: [Lua.org, PUC-Rio]
+  - root: sha1/sha1.c
+    origin: http://www.ghostscript.com/doc/jbig2dec/sha1.c
+    license: PublicDomain
+    copyright-holders: [Steve Reid, James H. Brown]
