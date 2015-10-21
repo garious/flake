@@ -125,12 +125,6 @@ void SHAPrintContext(SHA1_CTX *context, char *msg){
 }
 #endif /* VERBOSE */
 
-#ifdef SHA1HANDSOFF
-  #define SHA1_IS_HANDSOFF 1
-#else
-  #define SHA1_IS_HANDSOFF 0
-#endif
-
 /* Hash a single 512-bit block. This is the core of the algorithm. */
 void SHA1_Transform(uint32_t state[5], const uint8_t buffer[64])
 {
@@ -140,15 +134,14 @@ void SHA1_Transform(uint32_t state[5], const uint8_t buffer[64])
         uint32_t l[16];
     } CHAR64LONG16;
     CHAR64LONG16* block;
-    static CHAR64LONG16 workspace;
 
-    // do not cast char-aligned pointer to uint32-aligned buffer
-    if (SHA1_IS_HANDSOFF || (((size_t)buffer) & (size_t)7) != 0) {
-       block = &workspace;
-       memcpy(block, buffer, 64);
-    } else {
-       block = (void*)buffer;
-    }
+#ifdef SHA1HANDSOFF
+    static uint8_t workspace[64];
+    block = (CHAR64LONG16*)workspace;
+    memcpy(block, buffer, 64);
+#else
+    block = (CHAR64LONG16*)buffer;
+#endif
 
     /* Copy context->state[] to working vars */
     a = state[0];
