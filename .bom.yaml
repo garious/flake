@@ -4,7 +4,7 @@ license-file: LICENSE.txt
 copyright-holders: [Greg Fitzgerald]
 dependencies:
   - root: lua/lua-5.3.1
-    origin: http://www.lua.org/ftp/lua-5.3.1.tar.gz
+    origin: http://www.lua.org/ftp/lua-5.3.1.tar.gz#lua-5.3.1
     license: MIT
     license-file: doc/readme.html
     copyright-holders: [Lua.org, PUC-Rio]
