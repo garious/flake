@@ -8,7 +8,9 @@ dependencies:
     license: MIT
     license-file: doc/readme.html
     copyright-holders: [Lua.org, PUC-Rio]
-  - root: sha1/sha1.c
-    origin: http://www.ghostscript.com/doc/jbig2dec/sha1.c
+  - root: sha1
+    files: [sha1.c]
+    origin: http://downloads.sourceforge.net/project/jbig2dec/jbig2dec/0.11/jbig2dec-0.11.tar.gz#jbig2dec-0.11
     license: PublicDomain
+    license-file: sha1.c
     copyright-holders: [Steve Reid, James H. Brown]
