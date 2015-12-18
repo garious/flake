@@ -255,7 +255,7 @@ $ lua -l a prog.lua ...args...
 ```
 
 Cfromlua generates a C program that encapsulates these
-dependendencies. After compiling it you can invoke it with:
+dependencies. After compiling it you can invoke it with:
 
 ```bash
 $ prog ...args...
